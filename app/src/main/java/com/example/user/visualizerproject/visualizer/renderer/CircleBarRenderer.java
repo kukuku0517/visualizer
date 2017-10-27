@@ -12,6 +12,7 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 
 import com.example.user.visualizerproject.visualizer.AudioData;
+import com.example.user.visualizerproject.visualizer.DCTData;
 import com.example.user.visualizerproject.visualizer.FFTData;
 
 
@@ -91,6 +92,11 @@ public class CircleBarRenderer extends Renderer
     // Controls the pulsing rate
     modulation += 0.13;
     angleModulation += 0.28;
+  }
+
+  @Override
+  public void onRender(Canvas canvas, DCTData data, Rect rect) {
+
   }
 
   float modulation = 0;

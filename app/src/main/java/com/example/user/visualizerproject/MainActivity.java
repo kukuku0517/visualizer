@@ -135,11 +135,12 @@ public class MainActivity extends Activity {
         mVisualizerView.addRenderer(barGraphRendererBottom);
 
         Paint paint2 = new Paint();
-        paint2.setStrokeWidth(12f);
+        paint2.setStrokeWidth(50f);
         paint2.setAntiAlias(true);
         paint2.setColor(Color.argb(200, 181, 111, 233));
-        BarGraphRenderer barGraphRendererTop = new BarGraphRenderer(4, paint2, true);
-        mVisualizerView.addRenderer(barGraphRendererTop);
+        BarGraphRenderer barGraphRendererTop = new BarGraphRenderer(16, paint2, true);
+        mVisualizerView.addMyRenderer(barGraphRendererTop);
+
     }
 
     private void addCircleBarRenderer()

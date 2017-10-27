@@ -78,7 +78,7 @@ public class MFCC {
     }
 
 
-    public byte[]  mydoMFCC(float[] framedSignal) {
+    public double[] mydoMFCC(float[] framedSignal) {
         // Magnitude Spectrum
         bin = magnitudeSpectrum(framedSignal);
 
@@ -107,7 +107,7 @@ public class MFCC {
         // System.out.println("after DCT");
         // ArrayWriter.printDoubleArrayToConole(cepc);
 
-        byte[] result = extractFloatDataFromAmplitudeByteArray(cepc);
+//        byte[] result = extractFloatDataFromAmplitudeByteArray(cepc);
 
         return cepc;
     }

@@ -12,6 +12,7 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 
 import com.example.user.visualizerproject.visualizer.AudioData;
+import com.example.user.visualizerproject.visualizer.DCTData;
 import com.example.user.visualizerproject.visualizer.FFTData;
 
 
@@ -95,7 +96,10 @@ public class LineRenderer extends Renderer
   {
     // Do nothing, we only display audio data
   }
+  @Override
+  public void onRender(Canvas canvas, DCTData data, Rect rect) {
 
+  }
   private float colorCounter = 0;
   private void cycleColor()
   {

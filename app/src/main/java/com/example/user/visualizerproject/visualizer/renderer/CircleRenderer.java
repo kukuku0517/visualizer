@@ -12,6 +12,7 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 
 import com.example.user.visualizerproject.visualizer.AudioData;
+import com.example.user.visualizerproject.visualizer.DCTData;
 import com.example.user.visualizerproject.visualizer.FFTData;
 
 
@@ -82,7 +83,10 @@ public class CircleRenderer extends Renderer
   {
     // Do nothing, we only display audio data
   }
+  @Override
+  public void onRender(Canvas canvas, DCTData data, Rect rect) {
 
+  }
   float modulation = 0;
   float aggresive = 0.33f;
   private float[] toPolar(float[] cartesian, Rect rect)

@@ -10,6 +10,7 @@ import android.graphics.Canvas;
 import android.graphics.Rect;
 
 import com.example.user.visualizerproject.visualizer.AudioData;
+import com.example.user.visualizerproject.visualizer.DCTData;
 import com.example.user.visualizerproject.visualizer.FFTData;
 
 
@@ -39,6 +40,7 @@ abstract public class Renderer
    * @param rect - Rect to render into
    */
   abstract public void onRender(Canvas canvas, FFTData data, Rect rect);
+    abstract public void onRender(Canvas canvas, DCTData data, Rect rect);
 
 
   // These methods should actually be called for rendering
@@ -56,8 +58,19 @@ abstract public class Renderer
 
     onRender(canvas, data, rect);
   }
+    float[] dctPoints;
+    final public void render(Canvas canvas, DCTData data, Rect rect)
+    {
+        if (dctPoints == null || dctPoints.length < data.floats.length * 4) {
+            dctPoints = new float[data.floats.length * 4];
+        }
 
-  /**
+        onRender(canvas, data, rect);
+    }
+
+
+
+    /**
    * Render the FFT data onto the canvas
    * @param canvas - Canvas to draw on
    * @param data - Data to render
